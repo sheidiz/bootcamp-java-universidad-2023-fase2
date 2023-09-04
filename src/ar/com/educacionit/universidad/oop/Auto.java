@@ -3,12 +3,12 @@ package ar.com.educacionit.universidad.oop;
 public class Auto {
 
 	/*atributos*/
-	String marca;
-	String modelo;
-	int anio;
-	String color;
-	String patente;
-	float velocidad;
+	private String marca;
+	private String modelo;
+	private int anio;
+	private String color;
+	private String patente;
+	private float velocidad;
 	
 	/* Contructor: 
 	 * lo primero que se ejecuta
@@ -32,9 +32,15 @@ public class Auto {
 	
 	//alt+shit+s
 	
-	/*metodos*/
-	void acelerar() {
-		
+	/*polimorfismo por sobrecarga
+		dos o mas metodos con el mismo nombre, pero
+		distintos argumentos
+	*/
+	public void acelerar() {
+		this.velocidad++;
+	}
+	public void acelerar(float v) {
+		this.velocidad += v;
 	}
 	
 	void frenar() {
@@ -49,8 +55,13 @@ public class Auto {
 		return "Auto [marca=" + marca + ", modelo=" + modelo + ", anio=" + anio + ", color=" + color + ", patente="
 				+ patente + ", velocidad=" + velocidad + "]";
 	}
+
+	public float getVelocidad() {
+		return velocidad;
+	}
 	
 	//cambiar el coportamiento por defecto de
 	//el metodo toString()
+
 	
 }

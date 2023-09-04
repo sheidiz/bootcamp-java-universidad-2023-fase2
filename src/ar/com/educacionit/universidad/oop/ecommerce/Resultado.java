@@ -51,6 +51,7 @@ public class Resultado {
 
 	@Override
 	public String toString() {
+		super.toString();
 		return "{titulo=" + titulo + ", imagen=" + imagen + ", precio=" + precio + ", autor=" + autor + "}";
 	}
 	

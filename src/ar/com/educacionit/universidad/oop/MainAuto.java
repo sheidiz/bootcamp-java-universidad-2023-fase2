@@ -32,7 +32,8 @@ public class MainAuto {
 		Auto copiaDeClio = clio;
 		System.out.println("iguales: " + (copiaDeClio == clio) );
 				
-		copiaDeClio.velocidad = 1.0f;
+		//copiaDeClio.velocidad = 1.0f;
+		copiaDeClio.acelerar(1);		
 		System.out.println(clio.toString());
 		System.out.println(copiaDeClio.toString());
 	}

@@ -26,10 +26,9 @@ public class Buscador {
 		//aca se llama metodo actualizarResultados(lista)
 		//simular que la consulta encuentra 3 resultados
 		//creando 3 objetos de la clase resultados
-		Resultado res1 = new Resultado("MARVEL STUDIOS EL DICCION...", "https:bla.com.ar/img1.jpg", 13973.25f, "BRAY, ADAM");
-		Resultado res2 = new Resultado("NUNCA CORRI SIEMPRE COBRE", "https:bla.com.ar/img2.jpg", 6999, "OYOLA, LEONARDO A.");
-		Resultado res3 = new Resultado("MARVEL: GUIA DE PERSONAJES I R", "https:bla.com.ar/img3.jpg", 9490, "CATAPULTA, LOS EDITORES DE");
-		
+		Resultado res1 = new Libro("MARVEL STUDIOS EL DICCION...", "https:bla.com.ar/img1.jpg", 13973.25f, "BRAY, ADAM", "123456789",199,"sinopsis 123");
+		Resultado res2 = new Musica("NUNCA CORRI SIEMPRE COBRE", "https:bla.com.ar/img2.jpg", 6999, "OYOLA, LEONARDO A.", "sello discografico", new String[] {"tema1","tema2"});
+		Resultado res3 = new Pelicula("MARVEL: GUIA DE PERSONAJES I R", "https:bla.com.ar/img3.jpg", 9490, "CATAPULTA, LOS EDITORES DE","WARNER","BLUE RAY");
 		//agregar los resultados al array resultados
 		this.agregarResultado(res1);//f5
 		this.agregarResultado(res2);

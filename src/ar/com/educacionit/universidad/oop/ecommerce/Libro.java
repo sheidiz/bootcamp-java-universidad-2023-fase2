@@ -1,35 +1,35 @@
 package ar.com.educacionit.universidad.oop.ecommerce;
 
 public class Libro extends Resultado {
-	private String editorial;
-	private int nroPaginas;
-	private String idioma;
-	private String fechaPublicacion;
-	public Libro(String titulo, String imagen, float precio, String autor, String editorial, int nroPaginas,
-			String idioma, String fechaPublicacion) {
+
+	private String isbn;
+	private int numeroPaginas;
+	private String sinopsis;
+
+	public Libro(String titulo, String imagen, float precio, String autor, 
+			String isbn, int numeroPaginas,String sinopsis) {
 		super(titulo, imagen, precio, autor);
-		this.editorial = editorial;
-		this.nroPaginas = nroPaginas;
-		this.idioma = idioma;
-		this.fechaPublicacion = fechaPublicacion;
+		this.isbn = isbn;
+		this.numeroPaginas = numeroPaginas;
+		this.sinopsis = sinopsis;
 	}
-	public String getEditorial() {
-		return editorial;
+
+	public String getIsbn() {
+		return isbn;
 	}
-	public int getNroPaginas() {
-		return nroPaginas;
+
+	public int getNumeroPaginas() {
+		return numeroPaginas;
 	}
-	public String getIdioma() {
-		return idioma;
+
+	public String getSinopsis() {
+		return sinopsis;
 	}
-	public String getFechaPublicacion() {
-		return fechaPublicacion;
+
+	@Override
+	public String toString() {
+		return super.toString() + 
+		"Libro [isbn=" + isbn + ", numeroPaginas=" + numeroPaginas + ", sinopsis=" + sinopsis + "]";
 	}
-	public void setEditorial(String editorial) {
-		this.editorial = editorial;
-	}
-	public void setIdioma(String idioma) {
-		this.idioma = idioma;
-	}
-	
+
 }

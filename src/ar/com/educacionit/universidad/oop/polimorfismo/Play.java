@@ -1,25 +1,27 @@
 package ar.com.educacionit.universidad.oop.polimorfismo;
 
 public class Play extends Consola {
-	
+
 	private boolean tieneConexionAInternet;
 	private int memoria;
 	private boolean digital;
-	private int version;
-	private DiscoExterno discoExterno;
-	
-	//la play debe tener su constructor
-	//debe llamar al del padre
+	private int version;//1 - 5
+	private DiscoExterno discoExterno;//null
+
+	//la Play debe tener su constructor
+	//debe llamar al del padre 
 	public Play(String serie, 
 			String color, 
 			int version, 
-			boolean tieneConexion, 
-			int memoria, 
-			boolean digital) {
+			boolean tieneConexion,
+			int memoria,
+			boolean digital
+			) {
+
 		//super: hace referencia al padre
 		//super(): invocar al constructor de ese padre
-		super(serie,"Sony","Play " + version,color);
-		
+		super(serie,"Sony","Play "+version, color);
+
 		//seteo de atributos propios
 		this.version = version;
 		this.tieneConexionAInternet = tieneConexion;
@@ -49,9 +51,10 @@ public class Play extends Consola {
 	public int getVersion() {
 		return version;
 	}
+
 	@Override
 	public void play() {
-		System.out.println("Jugando con la PLay");
+		System.out.println("Juando con la Play");
 	}
 
 }
