@@ -17,8 +17,8 @@ public class MainMensajero {
 		DB db = new DB();
 		String tipo = db.getTipo();
 
-		IMensaje mensajeria = MensjeriaBuilder.buildMensajeria(tipo);
-		Mensaje mensaje = MensjeriaBuilder.buildMensaje(tipo,origen,destino,path,mensajeAEnviar);
+		IMensaje mensajeria = MensajeriaBuilder.buildMensajeria(tipo);
+		Mensaje mensaje = MensajeriaBuilder.buildMensaje(tipo,origen,destino,path,mensajeAEnviar);
 		
 		Mensajero mensajero = new Mensajero();
 		mensajero.setMensajeria(mensajeria);
