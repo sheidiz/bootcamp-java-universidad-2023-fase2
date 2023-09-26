@@ -1,13 +1,17 @@
 package ar.com.educacionit.universidad.oop.ecommerce;
 
+import java.time.LocalDate;
+
 public class Resultado {
 
 	protected String titulo;
 	protected String imagen;
-	protected float precio;
+	protected Float precio;
 	protected String autor;
+	protected Integer cantidadVendidos;
+	protected LocalDate fechaPublicacion;
 	
-	public Resultado(String titulo, String imagen, float precio, String autor) 
+	public Resultado(String titulo, String imagen, Float precio, String autor) 
 	{
 		this.titulo = titulo;
 		this.imagen = imagen;
@@ -33,13 +37,13 @@ public class Resultado {
 		return this.titulo;
 	}
 	
-	public float obtenerPrecio() {
+	public Float getPrecio() {
 		return this.precio;
 	}
 	
-	public void actualizarPrecio(float precio) {
+	public void actualizarPrecio(Float precio) {
 		if(precio < 0) {
-			this.precio = 0;
+			this.precio = 0f;
 		}else {
 			this.precio = precio;
 		}		
@@ -47,6 +51,22 @@ public class Resultado {
 	
 	public String obtenerAutor() {
 		return this.autor;
+	}
+	
+	public Integer getCantidadVendidos() {
+		return cantidadVendidos;
+	}
+
+	public void setCantidadVendidos(Integer cantidadVendidos) {
+		this.cantidadVendidos = cantidadVendidos;
+	}
+
+	public LocalDate getFechaPublicacion() {
+		return fechaPublicacion;
+	}
+
+	public void setFechaPublicacion(LocalDate fechaPublicacion) {
+		this.fechaPublicacion = fechaPublicacion;
 	}
 
 	@Override
